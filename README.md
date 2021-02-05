@@ -8,7 +8,8 @@
 2. celery 后台队列处理周期邮件任务
 
 ## Todo
-[] flask 测试 
+
+[x] flask 测试 
 [] 邮件投递测试
 [] celery 测试
 [] 定时投递测试
