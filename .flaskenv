@@ -1,0 +1,3 @@
+FLASK_APP=phoenix
+FLASK_ENV=development
+FLASK_CONFIG=settings.DevConfig
