@@ -2,8 +2,7 @@ from flask import Blueprint
 from flask import render_template
 from flask_mail import Message
 
-from ..services import mail
-from ..tasks.email import add_together
+from ..services import mail, add_together
 
 test = Blueprint('test', __name__)
 
@@ -30,7 +29,7 @@ def send():
 
 @test.route('/add')
 def add():
-    result = add_together(23, 42)
-    #result = add_together.delay(23, 42)
-    #result.wait()  # 65
+    #result = add_together(23, 42)
+    result = add_together.delay(23, 42)
+    result.wait()  # 65
     return 'celery success!'
